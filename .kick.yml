@@ -10,4 +10,10 @@ command:
 
   run:
   dev:
-    - "D:jekyll build -s /opt/docs -d /var/www/html --watch --force_polling --drafts"
+    - "jekyll build -s /opt/docs -d /var/www/html --watch  --incremental --force_polling --drafts"
+
+  wait: |
+    while [ true ]; do
+      kick dev
+      inotifywait -e modify /opt/*
+    done;
