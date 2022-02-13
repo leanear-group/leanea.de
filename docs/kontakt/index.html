@@ -70,13 +70,24 @@ description: |
                             <h4>Schreiben Sie uns</h4>
 
                             <!-- Form -->
-                            <form>
+                            <form method="post">
+                                <script src="https://formmailer.srv.infracamp.org/formmail.js?subscription_id=leanear"></script>
+                                <micx-formmail
+                                        onwaiting="this.show(`*[role='status']`)"
+                                        onsubmit="this.hide(`button[type='submit'],*[role='data_invalid']`);this.show(`*[role='success']`);this.parentElement.reset();"
+                                        oninvalid="this.show(`*[role='data_invalid']`)"
+                                        onerror="alert('Couldnt send mail');"
+                                        debug="yes">
+                                    <div class="alert alert-danger">Das Mailsystem steht aktuell nicht zur Verfügung!</div>
+                                </micx-formmail>
+
+
                                 <div class="row gx-3">
                                     <div class="col-sm-6">
                                         <!-- Form -->
                                         <div class="mb-3">
                                             <label class="form-label visually-hidden" for="hireUsFormFirstName">Vorname</label>
-                                            <input type="text" class="form-control form-control-lg" name="hireUsFormNameFirstName" id="hireUsFormFirstName" placeholder="Vorname" aria-label="Vorname">
+                                            <input type="text" required class="form-control form-control-lg" name="FirstName" id="hireUsFormFirstName" placeholder="Vorname" aria-label="Vorname">
                                         </div>
                                         <!-- End Form -->
                                     </div>
@@ -85,7 +96,7 @@ description: |
                                         <!-- Form -->
                                         <div class="mb-3">
                                             <label class="form-label visually-hidden" for="hireUsFormLasttName">Nachname</label>
-                                            <input type="text" class="form-control form-control-lg" name="hireUsFormNameLastName" id="hireUsFormLasttName" placeholder="Nachname" aria-label="Nachname">
+                                            <input type="text" required class="form-control form-control-lg" name="LastName" id="hireUsFormLasttName" placeholder="Nachname" aria-label="Nachname">
                                         </div>
                                         <!-- End Form -->
                                     </div>
@@ -94,27 +105,27 @@ description: |
                                 <!-- Form -->
                                 <div class="mb-3">
                                     <label class="form-label visually-hidden" for="hireUsFormCompanyName">Firma <span class="form-label-secondary">(Optional)</span></label>
-                                    <input type="text" class="form-control form-control-lg" name="hireUsFormNameCompanyName" id="hireUsFormCompanyName" placeholder="Firma" aria-label="Firma">
+                                    <input type="text" class="form-control form-control-lg" name="CompanyName" id="hireUsFormCompanyName" placeholder="Firma" aria-label="Firma">
                                 </div>
                                 <!-- End Form -->
                                 <!-- Form -->
                                 <div class="mb-3">
                                     <label class="form-label visually-hidden" for="hireUsFormWorkEmail">Email Adresse</label>
-                                    <input type="text" class="form-control form-control-lg" name="hireUsFormNameWorkEmail" id="hireUsFormWorkEmail" placeholder="email@site.com" aria-label="email@site.com">
+                                    <input type="email" required class="form-control form-control-lg" name="WorkEmail" id="hireUsFormWorkEmail" placeholder="email@site.com" aria-label="email@site.com">
                                 </div>
                                 <!-- End Form -->
 
                                 <!-- Form -->
                                 <div class="mb-3">
-                                    <label class="form-label visually-hidden" for="hireUsFormWorkPhone">Telefon</label>
-                                    <input type="tel" class="form-control form-control-lg" name="hireUsFormNameWorkPhone" id="hireUsFormWorkPhone" placeholder="+49 123 56789 (optional)" aria-label="+49 123 56789">
+                                    <label class="form-label visually-hidden" for="WorkPhone">Telefon</label>
+                                    <input type="tel" class="form-control form-control-lg" name="hireUsFormNameWorkPhone" id="WorkPhone" placeholder="+49 123 56789 (optional)" aria-label="+49 123 56789">
                                 </div>
                                 <!-- End Form -->
 
                                 <!-- Select -->
                                 <div class="mb-3">
                                     <label class="form-label visually-hidden" for="hireUsFormBudget">Wie können wir helfen</label>
-                                    <select name="hireUsFormNameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
+                                    <select name="NameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
                                         <option selected>Wie können wir helfen</option>
                                         <option value="Design Sprint Unterstützung">Design Sprint Unterstützung</option>
                                         <option value="Software Controlling">Software Controlling</option>
@@ -126,24 +137,23 @@ description: |
 
                                 <!-- Form -->
                                 <div class="mb-3">
-                                    <label class="form-label visually-hidden" for="hireUsFormDetails">Details</label>
-                                    <textarea class="form-control form-control-lg" name="hireUsFormNameDetails" id="hireUsFormDetails" placeholder="Erzählen Sie uns von Ihrem Projekt" aria-label="Erzählen Sie uns von Ihrem Projekt" rows="4"></textarea>
+                                    <label class="form-label visually-hidden" for="Details">Details</label>
+                                    <textarea class="form-control form-control-lg" name="hireUsFormNameDetails" id="Details" placeholder="Erzählen Sie uns von Ihrem Projekt" aria-label="Erzählen Sie uns von Ihrem Projekt" rows="4"></textarea>
                                 </div>
                                 <!-- End Form -->
 
-                                <!-- Checkbox -->
-                                <div class="form-check mb-3">
-                                    <input type="checkbox" class="form-check-input" id="signupFormPrivacyCheck" name="signupFormPrivacyCheck" required data-msg="Please accept our Privacy Policy.">
-                                    <label class="form-check-label" for="signupFormPrivacyCheck"> By submitting this form I have read and acknowledged the <a href=../page-privacy.html>Privacy Policy</a></label>
-                                </div>
-                                <!-- End Checkbox -->
 
+                                <div class="alert alert-success" hidden role="success">Ihre Nachricht wurde zugestellt. Wir melden uns in den nächsten Tagen bei Ihnen.</div>
+                                <div class="alert alert-danger" hidden role="data_invalid">Bitte überprüfen Sie Ihre Eingabe.</div>
                                 <div class="d-grid mb-2">
-                                    <button type="submit" class="btn btn-primary btn-lg">Send inquiry</button>
+
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <span class="spinner-border spinner-border-sm" role="status" hidden aria-hidden="true"></span> Absenden
+                                    </button>
                                 </div>
 
                                 <div class="text-center">
-                                    <span class="form-text">We'll get back to you in 1-2 business days.</span>
+                                    <span class="form-text">Wir melden uns in 1 bis 2 Arbeitstagen bei Ihnen.</span>
                                 </div>
                             </form>
                             <!-- End Form -->
@@ -153,19 +163,19 @@ description: |
 
                     <!-- SVG Shape -->
                     <figure class="position-absolute top-0 end-0 d-none d-md-block mt-n10" style="width: 12rem; margin-right: -10rem;">
-                        <img class="img-fluid" src="../assets/svg/components/three-arrows-1.svg" alt="Image Description">
+                        <img class="img-fluid" src="/assets/svg/components/three-arrows-1.svg" alt="Image Description">
                     </figure>
                     <!-- End SVG Shape -->
 
                     <!-- SVG Shape -->
                     <figure class="position-absolute bottom-0 end-0 zi-n1 d-none d-md-block mb-n10" style="width: 15rem; margin-right: -8rem;">
-                        <img class="img-fluid" src="../assets/svg/illustrations/grid-grey.svg" alt="Image Description">
+                        <img class="img-fluid" src="/assets/svg/illustrations/grid-grey.svg" alt="Image Description">
                     </figure>
                     <!-- End SVG Shape -->
 
                     <!-- SVG Shape -->
                     <figure class="position-absolute bottom-0 end-0 d-none d-md-block me-n5 mb-n5" style="width: 10rem;">
-                        <img class="img-fluid" src="../assets/svg/illustrations/plane.svg" alt="Image Description">
+                        <img class="img-fluid" src="/assets/svg/illustrations/plane.svg" alt="Image Description">
                     </figure>
                     <!-- End SVG Shape -->
                 </div>

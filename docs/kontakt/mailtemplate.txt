@@ -1,0 +1,9 @@
+{mail to="matthes@leuffen.de" name="Matthias Leuffen"}
+{mail from=WorkEmail name=WorkEmail}
+{mail charset="utf-8"}
+{subject}Online-Anfrage von {=FirstName} {=LastName}{/subject}
+
+Anfrage über Onlineformular
+
+{=__DATA__}
+
