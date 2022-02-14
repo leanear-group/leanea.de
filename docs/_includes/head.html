@@ -2,19 +2,22 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ page.title }}</title>
-
+    <title>{{ page.title | strip_html }} - leanear Consulting</title>
+    <meta name="description" content="{{ page.description | strip_html }}">
+    <meta name="keywords" content="{{ page.keywords }}" />
     <link rel="icon" href="/assets/leanear-logo-icon.png">
-    <meta name="description" content="{{ page.description }}">
-    <script src="//unpkg.com/@ungap/custom-elements"></script>
 
-    <meta property="og:site_name" content="leanear.group" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:description" content="{{ page.og_description }}" />
-    <meta property="og:image" content="http://leanear.de/assets/leanear-logo-xl.png" />
+    <meta property="og:type" content="{{ page.type | default: 'article' }}" />
+    <meta property="og:site_name" content="leanear Consulting" />
+    <meta property="og:title" content="{{ page.title | strip_html }}" />
+    <meta property="og:description" content="{{ page.og_description  | strip_html }}" />
+    <meta property="og:image" content="https://leanear.de/assets/leanear-logo-xl.png" />
     <!-- CSS Implementing Plugins -->
-
+    {% if page.type == 'article' %}
+    <meta property="article:author" content="leanear Consulting" />
+    <meta property="article:tag" content="{{ page.keywords }}" />
+    <meta property="article:section" content="{{ page.section }}" />
+    {% endif %}
     <!-- Font -->
     <!--link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
