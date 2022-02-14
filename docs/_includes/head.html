@@ -7,18 +7,22 @@
     <meta name="keywords" content="{{ page.keywords }}" />
     <link rel="icon" href="/assets/leanear-logo-icon.png">
 
+    <meta property="og:url" content="https://leanear.de/" />
     <meta property="og:type" content="{{ page.type | default: 'article' }}" />
     <meta property="og:site_name" content="leanear Consulting" />
     <meta property="og:title" content="{{ page.title | strip_html }}" />
     <meta property="og:description" content="{{ page.og_description  | strip_html }}" />
 
-    <meta property="og:image" itemprop="image" content="http://leanear.de/assets/leanear-pic.png" />
-    <meta property="og:image:secure_url" itemprop="image" content="https://leanear.de/assets/leanear-pic.png" />
+    <meta property="og:image" itemprop="image" content="https://leanear.de/assets/leanear-pic.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="256" />
     <meta property="og:image:height" content="256" />
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | strip_html }}">
+    <meta name="twitter:description" content="{{ page.og_description  | strip_html }}">
     <meta name="twitter:image" content="https://leanear.de/assets/leanear-pic.png" />
+
     <!-- CSS Implementing Plugins -->
     {% if page.type == 'article' %}
     <meta property="article:author" content="leanear Consulting" />
