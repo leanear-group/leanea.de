@@ -1,4 +1,4 @@
-# leanear.group
+# leanea
 
 
 ## Template
