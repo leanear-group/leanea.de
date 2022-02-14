@@ -8,7 +8,7 @@ Matthias Leuffen, Jan Zimmermann</p>
 
 <h2>Kontakt</h2>
 <p>Telefon: 0163/8268940<br />
-E-Mail: consulting@leanear.de</p>
+E-Mail: consulting@leanea.de</p>
 
 <h2>Redaktionell verantwortlich</h2>
 <p>Matthias Leuffen</p>
