@@ -1,20 +1,20 @@
 
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ page.title | strip_html }} - leanea Consulting</title>
-    <meta name="description" content="{{ page.description | strip_html }}">
-    <meta name="keywords" content="{{ page.keywords }}">
+
+    <title>{{ page.title | strip_html | escape }} - leanea Consulting</title>
+    <meta name="description" content="{{ page.description | strip_html | strip_newlines | escape }}">
+    <meta name="keywords" content="{{ page.keywords | strip_newlines | escape }}">
     <meta itemprop="publisher" content="leanea Consulting">
 
     <meta name="robots" content="index,follow">
     <link rel="icon" href="/assets/leanea-logo-icon.png">
 
-    <meta property="og:url" content="https://leanea.de/">
+    <meta property="og:url" content="https://leanea.de{{ page.dir }}">
     <meta property="og:type" content="{{ page.type | default: 'article' }}">
     <meta property="og:site_name" content="leanea Consulting">
-    <meta property="og:title" content="{{ page.title | strip_html }}">
-    <meta property="og:description" content="{{ page.og_description  | strip_html }}">
+    <meta property="og:title" content="{{ page.title | strip_html | strip_newlines | escape }}">
+    <meta property="og:description" content="{{ page.description  | strip_html | strip_newlines | escape }}">
 
     <meta property="og:image" itemprop="image" content="https://leanea.de/assets/leanea-pic.png">
     <meta property="og:image:type" content="image/png">
@@ -23,26 +23,21 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page.title | strip_html }}">
-    <meta name="twitter:description" content="{{ page.og_description  | strip_html }}">
+    <meta name="twitter:description" content="{{ page.description  | strip_html | strip_newlines | escape }}">
     <meta name="twitter:image" content="https://leanea.de/assets/leanea-pic.png">
 
-    <!-- CSS Implementing Plugins -->
     {% if page.type == 'article' %}
     <meta property="article:author" content="leanea Consulting">
     <meta property="article:tag" content="{{ page.keywords }}">
     <meta property="article:section" content="{{ page.section }}">
     {% endif %}
-    <!-- Font -->
-    <!--link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=auto" rel="stylesheet">
 
-    <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
     <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
 
-
-    <!-- CSS Unify Template -->
     <link rel="stylesheet" href="/assets/all.css">
