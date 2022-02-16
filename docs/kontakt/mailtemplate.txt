@@ -1,5 +1,5 @@
 {mail to="matthes@leuffen.de" name="Matthias Leuffen"}
-{mail from=WorkEmail name=WorkEmail}
+{mail from="undisclosed@xy.leanea.de" name="Undisclosed"}
 {mail charset="utf-8"}
 {subject}Online-Anfrage von {=FirstName} {=LastName}{/subject}
 
