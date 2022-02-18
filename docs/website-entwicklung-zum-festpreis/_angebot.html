@@ -1,0 +1,194 @@
+<div class="container content-space-t-1 content-space-t-lg-2">
+    <div class="row justify-content-center">
+        <div class="col-lg-7 mb-7 mb-sm-10 mb-lg-0">
+            <div class="pe-lg-5 ">
+                <div class="mb-4 mt-3">
+                    <h1 class="display-4">{{ page.title }}</h1>
+                    <p class="fs-3">{{ page.description}}</p>
+                    <p class="fs-3">
+                        Der direkte Kontakt per Videokonferenz spart Ihnen das vorherige
+                        Ausfüllen von Formularen und wir kommen schneller zum Ziel: Einer optimalen
+                        Webseite für Sie und Ihr Projekt.
+                    </p>
+                </div>
+
+
+
+                <div class="row col-sm-divider">
+                    <div class="col-sm-auto">
+                        <div class="pe-sm-4">
+                            <div class="d-flex gap-1 mb-2">
+                                <img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18">
+                                <img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18">
+                                <img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18">
+                                <img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18">
+                                <img src="/assets/svg/illustrations/star.svg" alt="Review rating" width="18">
+                            </div>
+                            <!-- End Rating -->
+
+                            <span class="d-block fs-5 mb-3"><span class="fw-bold text-dark">4.8</span> /5 - from 58 reviews</span>
+                            <!--img class="avatar avatar-4x3" src="./assets/svg/brands/google-dark.svg" alt="Logo"-->
+                        </div>
+                    </div>
+                    <!-- End Col -->
+
+
+                    <!-- End Col -->
+                </div>
+                <!-- End Row -->
+            </div>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-sm-9 col-lg-5">
+            <div class="position-relative">
+                <!-- Card -->
+                <div class="card card-shadow mb-3">
+                    <div class="card-body">
+                        <div class="text-center mb-5">
+                            <h4 class="card-title">Einfach Angebot wählen</h4>
+                        </div>
+
+                        <!-- List -->
+
+                        <!-- Form -->
+                        <form method="post">
+                            <script src="https://formmailer.srv.infracamp.org/formmail.js?subscription_id=leanea"></script>
+                            <script src="/assets/vendor/jquery/jquery.js"></script>
+                            <micx-formmail
+                                    onwaiting="this.show(`*[role='status']`)"
+                                    onsubmit="this.hide(`button[type='submit'],*[role='data_invalid']`);this.show(`*[role='success']`);this.parentElement.reset();"
+                                    oninvalid="this.show(`*[role='data_invalid']`)"
+                                    onerror="alert('Couldnt send mail');"
+                                    debug="yes">
+                                <div class="alert alert-danger">Das Mailsystem steht aktuell nicht zur Verfügung!</div>
+                            </micx-formmail>
+
+                            <ul class="list-unstyled list-py-1">
+                                <li>
+                                    <!-- Radio Check -->
+                                    <label class="form-check form-check-reverse form-check-select form-check-pinned-top-end" for="formCheckSelect1">
+                                        <input type="radio" class="form-check-input" name="paket" value="Landingpage" id="formCheckSelect1">
+                                        <span class="form-check-label">
+                          <span class="fw-medium">Landing-Page für Produkte oder als Webvisitenkarte</span>
+                          <span class="d-block h4 mb-0">€399</span>
+                          <span class="d-block fs-6 text-muted">SEO, Responsive - Live Vorschau - eine Session</span>
+                        </span>
+                                        <span class="form-check-stretched-bg"></span>
+                                    </label>
+                                    <!-- End Radio Check -->
+                                </li>
+
+                                <li>
+                                    <!-- Radio Check -->
+                                    <label class="form-check form-check-reverse form-check-select form-check-pinned-top-end" for="formCheckSelect2">
+                                        <input type="radio" class="form-check-input" name="paket" value="Webpraesenz" id="formCheckSelect2" checked="">
+                                        <span class="form-check-label">
+                          <span class="fw-medium">Webpräsenz für Unternehmen, Ärzte, usw.<span class="badge bg-soft-primary text-primary rounded-pill">Beliebt</span></span>
+                          <span class="d-block h4 mb-0">€799</span>
+                          <span class="d-block fs-6 text-muted">3 Seiten inkl. Blog & Kontakt - Live Vorschau - 2 Sessions</span>
+                        </span>
+                                        <span class="form-check-stretched-bg"></span>
+                                    </label>
+                                    <!-- End Radio Check -->
+                                </li>
+
+                                <li>
+                                    <!-- Radio Check -->
+                                    <label class="form-check form-check-reverse form-check-select form-check-pinned-top-end" for="formCheckSelect3">
+                                        <input type="radio" class="form-check-input" name="paket" value="Dynamische Seite" id="formCheckSelect3">
+                                        <span class="form-check-label">
+                          <span class="fw-medium">Dynamische Seite z. B. Shop</span>
+                          <span class="d-block h4 mb-0">€1.750</span>
+                          <span class="d-block fs-6 text-muted">Verknüpfung mit Google Docs - Live Vorschau - 3 Sessions</span>
+                        </span>
+                                        <span class="form-check-stretched-bg"></span>
+                                    </label>
+                                    <!-- End Radio Check -->
+                                </li>
+                            </ul>
+                            <!-- End List -->
+
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary" onclick="$('#slider').slideDown();this.setAttribute('hidden', 'hidden')">
+                                    <i class="bi-arrow-right-square"></i> Jetzt unverbindlich anfragen</button>
+                            </div>
+
+                            <div id="slider" class="hidden" style="display: none">
+                                <!-- End Form -->
+                                <!-- Form -->
+                                <div class="mb-3">
+                                    <label class="form-label visually-hidden" for="Name">Name</label>
+                                    <input type="text" class="form-control form-control-lg" name="Name" id="Name" placeholder="Name" aria-label="Name">
+                                </div>
+                                <!-- End Form -->
+                                <!-- Form -->
+                                <div class="mb-3">
+                                    <label class="form-label visually-hidden" for="hireUsFormCompanyName">Firma <span class="form-label-secondary">(Optional)</span></label>
+                                    <input type="text" class="form-control form-control-lg" name="CompanyName" id="hireUsFormCompanyName" placeholder="Firma" aria-label="Firma">
+                                </div>
+                                <!-- End Form -->
+                                <!-- Form -->
+                                <div class="mb-3">
+                                    <label class="form-label visually-hidden" for="hireUsFormWorkEmail">Email Adresse</label>
+                                    <input type="email" required class="form-control form-control-lg" name="WorkEmail" id="hireUsFormWorkEmail" placeholder="email@site.com" aria-label="email@site.com">
+                                </div>
+                                <!-- End Form -->
+
+                                <!-- Form -->
+                                <div class="mb-3">
+                                    <label class="form-label visually-hidden" for="WorkPhone">Telefon</label>
+                                    <input type="tel" class="form-control form-control-lg" name="WorkPhone" id="WorkPhone" placeholder="+49 123 56789 (optional)" aria-label="+49 123 56789">
+                                </div>
+                                <!-- End Form -->
+
+                                <!-- Select -->
+                                <div class="mb-3">
+                                    <label class="form-label visually-hidden" for="Business">Branche z. B. Arzt</label>
+                                    <input type="tel" class="form-control form-control-lg" name="Business" id="Business" placeholder="Branche z. B. Arzt" aria-label="Branche z. B. Arzt">
+
+                                </div>
+                                <!-- End Select -->
+
+                                <!-- Form -->
+                                <div class="mb-3">
+                                    <label class="form-label visually-hidden" for="Details">Details</label>
+                                    <textarea class="form-control form-control-lg" name="hireUsFormNameDetails" id="Details" placeholder="Erzählen Sie uns von Ihrem Projekt" aria-label="Erzählen Sie uns von Ihrem Projekt" rows="4"></textarea>
+                                </div>
+                                <!-- End Form -->
+
+
+                                <div class="alert alert-success" hidden role="success">Ihre Nachricht wurde zugestellt. Wir melden uns in den nächsten Tagen bei Ihnen.</div>
+                                <div class="alert alert-danger" hidden role="data_invalid">Bitte überprüfen Sie Ihre Eingabe.</div>
+                                <div class="d-grid mb-2">
+
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <span class="spinner-border spinner-border-sm" role="status" hidden aria-hidden="true"></span> <i class="bi-chat-right"></i> Anfrage absenden
+                                    </button>
+                                </div>
+
+                                <div class="text-center">
+                                    <span class="form-text">Wir melden uns in 1 bis 2 Arbeitstagen bei Ihnen.</span>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End Form -->
+                    </div>
+                </div>
+                <!-- End Card -->
+
+                <!-- SVG Shape -->
+                <figure class="position-absolute top-0 end-0 zi-n1 d-none d-sm-block me-n10" style="width: 4rem;">
+                    <img class="img-fluid" src="https://static.leanea.de/unify-v3.0/assets/svg/components/pointer-up.svg" alt="Image Description">
+                </figure>
+                <!-- End SVG Shape -->
+            </div>
+
+            <div class="text-center">
+                <p class="fs-5 text-muted">Benötigen Sie ein individuelles Angebot? <a class="link link-pointer" href="/kontakt">Anfragen</a></p>
+            </div>
+        </div>
+        <!-- End Col -->
+    </div>
+    <!-- End Row -->
+</div>
