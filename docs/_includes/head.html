@@ -26,7 +26,7 @@
     <meta name="twitter:description" content="{{ page.description  | strip_html | strip_newlines | escape }}">
     <meta name="twitter:image" content="https://leanea.de/assets/leanea-pic.png">
 
-    {% if page.type == 'article' %}
+    {% if page.type != 'website' %}
     <meta property="article:author" content="leanea Consulting">
     <meta property="article:tag" content="{{ page.keywords }}">
     <meta property="article:section" content="{{ page.section }}">

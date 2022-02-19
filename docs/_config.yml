@@ -1,3 +1,6 @@
+# Changes to this file will NOT be reloaded in jekyll --watch mode! Restart
+# jekyll after updating this file!
+
 title: KasimirJS
 description: educational grade development tools
 google_analytics:
@@ -7,12 +10,27 @@ show_downloads: true
 permalink: pretty
 #exclude: ['assets']
 
+page:
+  type: article
+  publisher: leanea Consulting
+  site_name: leanea.de
+  url: "https://leanea.de"
+  icon_path: "/assets/leanea"
+
+
+livereload: true
+
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
-      title: developer camp
+
+  # /index/ path will be mounted to /
+  - scope:
+      path: "index"
+    values:
+      permalink: /
 
 plugins:
 - jekyll-optional-front-matter

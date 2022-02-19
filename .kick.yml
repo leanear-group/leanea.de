@@ -2,6 +2,7 @@
 # Run ./kickstart.sh to start a development-container for this project
 version: 1
 from: "infracamp/kickstart-flavor-jekyll"
+
 command:
   build:
     - "sudo chmod 777 /var/www/html"
