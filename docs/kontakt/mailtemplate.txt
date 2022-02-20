@@ -1,4 +1,4 @@
-{mail to="matthes@leuffen.de" name="Matthias Leuffen"}
+{mail to="kontakt@leanea.de" name="leanea consulting"}
 {mail from="undisclosed@xy.leanea.de" name="Undisclosed"}
 {mail charset="utf-8"}
 {subject}Online-Anfrage von {=FirstName} {=LastName}{/subject}
