@@ -24,6 +24,35 @@ description: |
 
 
 
-
 {% include_relative _call_for_action.html %}
 
+<script>
+    /**
+     * Smooth scrolling
+     *
+     * @author Matthias Leuffen <m@tth.es>
+     */
+    window.addEventListener('DOMContentLoaded', (event) => {
+
+        window.addEventListener("popstate", (e)=>{
+            e.preventDefault();
+            let te = document.querySelector(window.location.hash.substring(0, window.location.hash.length - 2));
+            if (te !== null)
+                $('html,body').animate({scrollTop: $(te).offset().top},'slow');
+            return false;
+        });
+
+        for (let el of document.querySelectorAll("a[href^='#']")) {
+            el.addEventListener("click", (e)=>{
+                e.preventDefault();
+                let aid = e.target.getAttribute("href");
+                history.pushState(null, null, aid);
+                let targetElement = document.querySelector(aid.substring(0, aid.length-2));
+                if (targetElement !== null)
+                    $('html,body').stop().animate({scrollTop: $(targetElement).offset().top},'slow');
+                return false;
+            })
+            el.setAttribute("href", el.getAttribute("href") + "--");
+        }
+    });
+</script>
