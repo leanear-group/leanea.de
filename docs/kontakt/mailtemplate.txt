@@ -1,9 +1,11 @@
 {mail to="kontakt@leanea.de" name="leanea consulting"}
 {mail from="undisclosed@xy.leanea.de" name="Undisclosed"}
+{mail replyTo=email name=email}
 {mail charset="utf-8"}
-{subject}Online-Anfrage von {=FirstName} {=LastName}{/subject}
+{subject}Online-Anfrage von {=Name} ({=CompanyName}){/subject}
 
-Anfrage über Onlineformular
+Neue Anfrage über leanea.de:
+----------------------------
 
 {=__DATA__}
 
