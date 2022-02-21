@@ -10,12 +10,15 @@ show_downloads: true
 permalink: pretty
 #exclude: ['assets']
 
+sass:
+  sass_dir: _sass_disabled
+
 page:
   type: article
   publisher: leanea Consulting
   site_name: leanea.de
   url: "https://leanea.de"
-  icon_path: "/assets/leanea"
+  icon_path: "https://static.leanea.de/uni-v3.0/assets/leanea"
 
 
 livereload: true
