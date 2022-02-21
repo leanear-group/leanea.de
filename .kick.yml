@@ -9,7 +9,7 @@ command:
     - "jekyll build -s /opt/docs -d /var/www/html"
 
   sass:
-    - "sass /opt/docs/_sass/theme.scss /opt/docs/assets/theme.css"
+    - "sass -t compressed /opt/docs/_sass/theme.scss /opt/docs/assets/theme.css"
   run:
   dev:
 
