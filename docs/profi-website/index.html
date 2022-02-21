@@ -10,21 +10,22 @@ description: |
     sofort um und Ihre neue Website ist innerhalb weniger Stunden online.
 ---
 {% include_relative _angebot.html %}
+
 {% include_relative _story_bild.html %}
 {% include_relative _testemonial.html %}
 
-{% include_relative _zeitersparnis.html %}
-{% include_relative _features_block.html %}
-{% include_relative _ablauf.html %}
+{% include_relative _livepreview.html %}
+{% include_relative _storytelling.html %}
 
-{% include_relative _black.html %}
-{% include_relative _fullservice.html %}
+
+{% include_relative _quality.html %}
+{% include_relative _ablauf.html %}
 
 {% include_relative _pricing.html %}
 
-
-
+{% include_relative _kundenmeinungen.html %}
 {% include_relative _call_for_action.html %}
+
 
 <script>
     /**
@@ -49,7 +50,7 @@ description: |
                 history.pushState(null, null, aid);
                 let targetElement = document.querySelector(aid.substring(0, aid.length-2));
                 if (targetElement !== null)
-                    $('html,body').stop().animate({scrollTop: $(targetElement).offset().top},'slow');
+                    $('html,body').stop().animate({scrollTop: $(targetElement).offset().top - 40},'slow');
                 return false;
             })
             el.setAttribute("href", el.getAttribute("href") + "--");
